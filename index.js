@@ -17,11 +17,11 @@ Array.prototype.customMap = function (f) {
 }
 
 let arr = [
-  123,3,1
+  1, 2, 3
 ]
 
 let newArr = arr.customMap((i) => {
-  console.log('test item', i);
+  console.log('current item', i);
   return i;
 });
 
