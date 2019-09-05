@@ -1,7 +1,7 @@
 Array.prototype.customMap = function (f) {
 
-  const head = (arr) => arr[0];
-  const tail = (arr) => arr.splice(1, this.length);
+  const head = (arr) => arr[0]; //Returns the first item of the array passed
+  const tail = (arr) => arr.splice(1, this.length); //Returns the rest of the array
 
   let currentIndex = -1;
 
@@ -18,14 +18,5 @@ Array.prototype.customMap = function (f) {
   return map(this, f);
 }
 
-let arr = [
-  1, 2, 3
-]
-
-let newArr = arr.customMap((item, index) => {
-  console.log('current item', item);
-  console.log('current index', index);
-  return item;
-});
-
-console.log(newArr);
+let arr = [1, 2, 3]
+arr.customMap((item, index) => console.log(`current item ${item} with index ${index}`))
